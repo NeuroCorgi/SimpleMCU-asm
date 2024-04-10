@@ -1,0 +1,5 @@
+[workspace]
+
+members = [
+    "smcu_asm", "smcu_web",
+]
