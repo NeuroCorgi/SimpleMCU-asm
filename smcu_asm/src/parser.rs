@@ -1,7 +1,8 @@
 use std::collections::hash_map::Entry;
 
-use crate::machine::{Address, Instruction, InstructionParseError};
-use crate::asm_info::{AsmInfo};
+use crate::machine::{Address, Instruction};
+pub use crate::machine::InstructionParseError;
+use crate::asm_info::AsmInfo;
 
 #[derive(Debug)]
 pub enum DerectiveError {

@@ -8,8 +8,10 @@ fn main() {
     println!("Assembling: {filename}");
     let contents = fs::read_to_string(filename).unwrap();
 
-    let assembled = smcu_asm::run(contents);
+    match smcu_asm::run(contents) {
+        Ok(assembled) => println!("{assembled}"),
+        Err(errors) => errors.iter().for_each(|e| {dbg!(e);}),
+    }
     // println!("Hello, world!");
-    println!("{assembled}");
     
 }
